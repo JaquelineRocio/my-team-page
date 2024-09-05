@@ -3,32 +3,52 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 5vw;
+  width: 100vw;
+}
+a {
+  color: #afafaf;
+  font-weight: bold;
 }
 .team-header {
   display: flex;
   flex-direction: column;
-  width: 95vw;
+  width: 100%;
   padding: 5vw;
+  margin: 0 auto;
 }
 .team-title {
-  margin: 20px 0;
+  margin: 10% 0 0 0;
 }
 .team-description {
   font-size: 0.6em;
+  margin: 10% 0;
 }
 main {
+  width: 100%;
+
   display: flex;
   justify-content: flex-end;
+  margin: 0 auto;
 }
 .team-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  width: 95vw;
 }
 
 .team-member {
@@ -76,4 +96,66 @@ main {
   display: flex;
   justify-content: center;
   margin: 4vh;
+}
+@media (min-width: 768px) {
+  body {
+    padding: 0 10vw;
+    width: 80vw;
+  }
+  .team-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0vw;
+    justify-content: space-between;
+  }
+  .team-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 70px;
+  }
+
+  .team-member {
+    display: grid;
+    grid-template-columns: repeat(6, 13%);
+    grid-template-rows: repeat(5, 27%);
+  }
+  .team-title {
+    font-size: 2em;
+    margin: 5% 0;
+    width: 50%;
+  }
+  .team-description {
+    font-size: 1em;
+    margin: 5% 0;
+    width: 50%;
+    padding-right: 100px;
+  }
+  .team-member-role {
+    font-size: 0.7em;
+    width: 200px;
+  }
+  .team-member-name {
+    font-size: 1em;
+  }
+  .arriba.abajo.team-member-photo {
+    grid-row-start: 1;
+  }
+
+  .arriba.abajo.team-member-role {
+    grid-row-start: 1;
+  }
+  .arriba.abajo.team-member-name {
+    grid-row-start: 4;
+  }
+  .abajo-dektop.team-member-photo {
+    grid-row-start: 2;
+  }
+
+  .abajo-dektop.team-member-role {
+    grid-row-start: 2;
+  }
+  .abajo-dektop.team-member-name {
+    grid-row-start: 5;
+  }
 }
