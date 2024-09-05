@@ -49,12 +49,13 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  row-gap: 25px;
 }
 
 .team-member {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 25%);
 }
 .team-member-photo {
   width: 100%;
@@ -113,6 +114,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     row-gap: 70px;
+    margin-bottom: 100px;
   }
 
   .team-member {
